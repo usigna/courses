@@ -10,17 +10,127 @@
 		<link rel="stylesheet" href="css/presentation.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
 
 		<style>
-			/* Write your CSS here */
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.learn {
+				background-color: #f7f7f7;
+				font-family: "Poppins", sans-serif;
+			}
+
+			.container {
+				background-color: #ffffff;
+				border-radius: 15px;
+				box-shadow: 2px 2px 10px #e9e9e9,
+										-2px -2px 10px #e9e9e9;
+				padding: 40px;
+				text-align: left;
+			}
+
+			.box {
+				width: 80%;
+				height: auto;
+				margin-bottom: 40px;
+				border-radius: 15px;
+				height: 250px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.box:first-of-type {
+				background: url("images/characters/bg-elephant.jpg");
+				background-size: 100%;
+			}
+
+			.box:nth-of-type(2) {
+				background: url("images/characters/bg-cat.jpg");
+				background-size: 100%;
+			}
+
+			.box:last-of-type {
+				background: url("images/characters/bg-bunny.jpg");
+				background-size: 100%;
+			}
+
+			.text-wrapper {
+				padding-left: 150px;
+			}
+
+			h2 {
+				margin-bottom: 15px;
+			}
+
+			.results {
+				display: flex;
+				gap: 20px;
+			}
+
+			span {
+				font-size: 14px;
+				font-weight: 300;
+			}
+
 		</style>
 	</head>
 	<body>
 		<section class="learn">
 			<!-- Practice area start -->
+			<div class="container">
+				<div class="box">
+					<div class="text-wrapper">
+						<h2>The Viking</h2>
+						<div class="results">
+							<div>
+								<b>68%</b>
+								<br/><span>Win Rate</span>
+							</div>
+							<div>
+								<b>522</b>
+								<br/><span>Games Played</span>
+							</div>
+						</div>
+					</div>
+				</div>
 
-			<!-- Write your HTML here -->
+				<div class="box">
+					<div class="text-wrapper">
+						<h2>The Sorceress</h2>
+						<div class="results">
+							<div>
+								<b>97%</b>
+								<br/><span>Win Rate</span>
+							</div>
+							<div>
+								<b>1922</b>
+								<br/><span>Games Played</span>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="box">
+					<div class="text-wrapper">
+						<h2>The Fashionista</h2>
+						<div class="results">
+							<div>
+								<b>24%</b>
+								<br/><span>Win Rate</span>
+							</div>
+							<div>
+								<b>124</b>
+								<br/><span>Games Played</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<!-- Practice area end -->
 		</section>

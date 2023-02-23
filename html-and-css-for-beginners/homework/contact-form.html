@@ -14,13 +14,110 @@
 
 		<style>
 			/* Write your CSS here */
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.learn {
+				background-color: #f7f7f7;
+				font-family: "Poppins", sans-serif;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.container {
+				width: 500px;
+				background-color: #ffffff;
+				border-radius: 10px;
+				box-shadow: 2px 2px 10px #e9e9e9,
+										-2px -2px 10px #e9e9e9;
+				padding: 40px;
+				color: #132a3b;
+			}
+
+			h1 {
+				font-weight: 900;
+				margin: 30px 0;
+				font-size: 35px;
+			}
+
+			form div {
+				display: flex;
+				flex-direction: column;
+			}
+
+			label {
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+
+			input,
+			select,
+			textarea {
+				color: #586774;
+				background-color: #f3f4f5;
+				border-radius: 5px;
+				border: none;
+				padding: 10px;
+				font-size: 16px;
+				line-height: 1.5;
+				margin-bottom: 20px;
+			}
+
+			select {
+				appearance: none;
+				background: #f3f4f5 url("images/contact-form/arrow-down.svg") no-repeat 95% center;
+			}
+
+			textarea {
+				resize: none;
+			}
+
+			input[type="submit"] {
+				width: 100%;
+				color: #ffffff;
+				background-color: #3589d2;
+				padding: 20px 0;
+				font-weight: 600;
+			}
 		</style>
 	</head>
 	<body>
 		<section class="learn">
 			<!-- Practice area start -->
 
-			<!-- Write your HTML here -->
+			<div class="container">
+				<img src="images/contact-form/envelope.svg" alt="Envelope." />
+				<h1>Let's get in touch</h1>
+				<form action="" method="post">
+					<div>
+						<label for="contact-name">Name</label>
+						<input type="text" name="contact-name" id="contact-name" placeholder="Chuck Norris" />
+					</div>
+					<div>
+						<label for="contact-email">Email address</label>
+						<input type="email" name="contact-email" id="contact-email" placeholder="chuck@roundhouse.com" />
+					</div>
+					<div>
+						<label for="contact-department">Department</label>
+						<select name="contact-department" id="contact-department">
+							<option>Select a department</option>
+							<option value="lorem-1">Lorem, ipsum.</option>
+							<option value="lorem-2">Lorem, ipsum.</option>
+						</select>
+					</div>
+					<div>
+						<label for="contact-message">Message</label>
+						<textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, consequuntur."></textarea>
+					</div>
+					<input type="submit" value="Send Message">
+				</form>
+			</div>
 
 			<!-- Practice area end -->
 		</section>
