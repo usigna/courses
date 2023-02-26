@@ -14,13 +14,80 @@
 
 		<style>
 			/* Write your CSS here */
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.learn {
+				background-color: #f7f7f7;
+				font-family: "Poppins", sans-serif;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 25px;
+			}
+
+			.box {
+				width: 350px;
+				height: 120px;
+				border-radius: 15px;
+				padding: 30px;
+				color: #fefefe;
+				display: flex;
+				align-items: center;
+				gap: 30px;
+			}
+
+			.box:first-of-type {
+				background-color: #132a3b;
+			}
+
+			.box:nth-of-type(2) {
+				background-color: #1f5475;
+			}
+
+			.box:last-of-type {
+				background-color: #f66a11;
+			}
+
+			.box b {
+				font-size: 30px;
+			}
+
 		</style>
 	</head>
 	<body>
 		<section class="learn">
 			<!-- Practice area start -->
 
-			<!-- Write your HTML here -->
+			<div class="box">
+				<img src="images/real-estate-statistics/house-chimney.svg" alt="House" />
+				<div>
+					<b>510</b>
+					<br />Properties in total
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="images/real-estate-statistics/cart-plus.svg" alt="Cart" />
+				<div>
+					<b>253</b>
+					<br />Properties for sale
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="images/real-estate-statistics/user-check.svg" alt="User" />
+				<div>
+					<b>257</b>
+					<br />Properties for rental
+				</div>
+			</div>
 
 			<!-- Practice area end -->
 		</section>
