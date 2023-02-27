@@ -14,13 +14,102 @@
 
 		<style>
 			/* Write your CSS here */
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.learn {
+				background-color: #f7f7f7;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.container {
+				width: 75%;
+				padding: 200px 0;
+				color: #132a3b;
+				font-family: "Poppins", sans-serif;
+				border-radius: 5px;
+				box-shadow: 2px 2px 10px #e9e9e9, -2px -2px 10px #e9e9e9;
+				text-align: center;
+				background: #fff url("images/patterns/patterns.png");
+			}
+
+			.logo {
+				margin-bottom: 80px;
+			}
+
+			.title {
+				font-size: 50px;
+				font-weight: 900;
+				margin-bottom: 40px;
+			}
+
+			.text {
+				font-size: 22px;
+				color: #5d6669;
+				margin-bottom: 50px;
+			}
+
+			.list {
+				list-style: none;
+				color: #5d6669;
+				display: flex;
+				justify-content: center;
+				gap: 50px;
+				margin-bottom: 70px;
+			}
+
+			.list li {
+				position: relative;
+			}
+
+			.list li::before {
+				content: "";
+				width: 20px;
+				height: 20px;
+				background: url("images/patterns/green-checkmark.svg") no-repeat center/cover;
+				position: absolute;
+				top: calc(50% - 10px);
+				left: -25px;
+			}
+
+			.btn {
+				display: inline-flex;
+				text-decoration: none;
+				color: #fff;
+				border-radius: 5px;
+				padding: 15px 25px;
+				background: linear-gradient(90deg, #806df9, #f0375d);
+			}
 		</style>
 	</head>
 	<body class="flip">
 		<section class="learn">
 			<!-- Practice area start -->
 
-			<!-- Write your HTML here -->
+			<div class="container">
+				<img src="images/patterns/envato-elements-logo-vector.svg" alt="Logo Envato Elements" class="logo" />
+				<h1 class="title">
+					The unlimited creative 
+					<br />subscription
+				</h1>
+				<p class="text">
+					Unlimited downloads of 60+ milion creative assets.
+					<br />From just &euro;14.50/month.
+				</p>
+				<ul class="list">
+					<li>Stock Videos</li>
+					<li>Music</li>
+					<li>Photos &amp; Graphics</li>
+				</ul>
+				<a href="#" class="btn">Start 7-day free trial</a>
+			</div>
 
 			<!-- Practice area end -->
 		</section>
