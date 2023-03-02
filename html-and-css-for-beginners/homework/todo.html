@@ -14,13 +14,131 @@
 
 		<style>
 			/* Write your CSS here */
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.learn {
+				background-color: #f7f7f7;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.container {
+				color: #12293a;
+				background-color: #fff;
+				border-radius: 10px;
+				box-shadow: 2px 2px 10px #e6e6e6, -2px -2px 10px #e6e6e6;
+				font-family: "Poppins", sans-serif;
+				padding: 35px 60px;
+			}
+
+			.title {
+				font-size: 32px;
+				font-weight: 900;
+				margin-bottom: 30px;
+			}
+
+			.todo {
+				list-style: none;
+			}
+
+			.todo li {
+				display: flex;
+				gap: 20px;
+				padding: 20px;
+				margin-bottom: 15px;
+				line-height: 2;
+				position: relative;
+			}
+
+			.todo li:first-of-type {
+				background-color: #f2fbfa;
+			}
+
+			.todo li:nth-of-type(2) {
+				background-color: #f2fcff;
+			}
+
+			.todo li:last-of-type {
+				background-color: #f7f5fc;
+			}
+
+			.todo li::before {
+				content: "";
+				width: 5px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: -5px;
+			}
+
+			.todo li:first-of-type:before {
+				background-color: #02ae9c;
+			}
+
+			.todo li:nth-of-type(2):before {
+				background-color: #04c3f8;
+			}
+
+			.todo li:last-of-type:before {
+				background-color: #5737c6;
+			}
+
+
+			b {
+				font-weight: 600;
+				font-size: 18px;
+			}
+
+			span {
+				color: #8c9ca4;
+				font-size: 14px;
+			}
+
+			.checked img,
+			.checked .text {
+				opacity: .5;
+			}
+
+			.checked b {
+				text-decoration: line-through;
+			}
 		</style>
 	</head>
 	<body>
 		<section class="learn">
 			<!-- Practice area start -->
 
-			<!-- Write your HTML here -->
+			<div class="container">
+				<h1 class="title">Today</h1>
+				<ul class="todo">
+					<li>
+						<img src="images/todo/checkbox-unchecked.svg" alt="Unchecked." />
+						<div class="text">
+							<b>Robert Fox Portfolio Website</b>
+							<br><span>Design the landing page</span>
+						</div>
+					</li>
+					<li>
+						<img src="images/todo/checkbox-unchecked.svg" alt="Unchecked." />
+						<div class="text">
+							<b>Daily reading</b>
+							<br><span>Napoleon Hill</span>
+						</div>
+					</li>
+					<li class="checked">
+						<img src="images/todo/checkbox-checked.svg" alt="Checked." />
+						<div class="text">
+							<b>YouTube Content</b>
+							<br><span>Design the landing page</span>
+						</div>
+					</li>
+				</ul>
+			</div>
 
 			<!-- Practice area end -->
 		</section>
