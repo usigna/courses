@@ -14,6 +14,89 @@
 
 		<style>
 			/* Write your CSS here */
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.learn {
+				background-color: #f7f7f7;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.container {
+				width: 840px;
+				color: #12293a;
+				background-color: #fff;
+				border-radius: 10px;
+				box-shadow: 2px 2px 10px #e6e6e6, -2px -2px 10px #e6e6e6;
+				font-family: "Poppins", sans-serif;
+				padding: 60px 50px;
+			}
+
+			.title {
+				font-size: 32px;
+				font-weight: 900;
+				margin-bottom: 50px;
+			}
+
+			.table {
+				border-collapse: collapse;
+				border: 1px solid #e3e5e8;
+  			overflow: hidden;
+			}
+
+			tr {
+				border-bottom: 1px solid #e3e5e8;
+			}
+
+			tr:last-of-type {
+				border: 0;
+			}
+
+			th {
+				color: #a0a8af;
+				padding: 20px 0;
+				text-transform: uppercase;
+			}
+
+			thead tr {
+				background-color: #132a3b;
+			}
+
+			td {
+				padding: 20px 30px;
+			}
+
+			tfoot {
+				font-weight: 600;
+				background-color: #f3f4f5;
+			}
+
+			.status {
+				border-radius: 50px;
+				font-weight: 700;
+				padding: 10px 15px;
+			}
+
+			.status--processing {
+				color: #1e99f3;
+				background-color: #d4edff;
+			}
+
+			.status--success {
+				color: #46b113;
+				background-color: #e2f9dd;
+			}
+
+			.status--reverted {
+				color: #f34620;
+				background-color: #ffd4d4;
+			}
+
 		</style>
 	</head>
 	<body class="flip">
@@ -21,6 +104,71 @@
 			<!-- Practice area start -->
 
 			<!-- Write your HTML here -->
+			<div class="container">
+				<h1 class="title">Payouts</h1>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Payee</th>
+							<th>Amount</th>
+							<th>Date</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<b>John Wick</b>
+								<br>Shoota Inc
+							</td>
+							<td>$42,272.23</td>
+							<td>Jan 13, 2022</td>
+							<td>
+								<span class="status status--processing">Processing</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Willem Dafoe</b>
+								<br>Spider Inc
+							</td>
+							<td>$27,221.00</td>
+							<td>Dec 07, 2021</td>
+							<td>
+								<span class="status status--success">Success</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Chuck Norris</b>
+								<br>Roundhouse Inc
+							</td>
+							<td>$6,982.00</td>
+							<td>Oct 20, 2021</td>
+							<td>
+								<span class="status status--success">Success</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nick Cage</b>
+								<br>Convicts Inc
+							</td>
+							<td>$13,821.72</td>
+							<td>Oct 14, 2021</td>
+							<td>
+								<span class="status status--reverted">Reverted</span>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>Total Paid</td>
+							<td colspan="3">$90,296.95</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
 
 			<!-- Practice area end -->
 		</section>
