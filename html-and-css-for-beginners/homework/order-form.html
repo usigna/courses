@@ -14,13 +14,259 @@
 
 		<style>
 			/* Write your CSS here */
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			.sr-only {
+				border: 0;
+				clip: rect(1px, 1px, 1px, 1px);
+				-webkit-clip-path: inset(50%);
+				clip-path: inset(50%);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+				white-space: nowrap;
+			}
+
+			.learn {
+				background-color: #f7f7f7;
+				font-family: "Poppins", sans-serif;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.container {
+				width: 850px;
+				background-color: #ffffff;
+				border-radius: 10px;
+				box-shadow: 2px 2px 10px #e9e9e9, -2px -2px 10px #e9e9e9;
+				padding: 40px 50px;
+				color: #132a3b;
+			}
+
+			.title {
+				font-weight: 900;
+				font-size: 30px;
+				margin-bottom: 30px;
+			}
+
+			.box {
+				display: grid;
+			}
+
+			.box:first-of-type,
+			.box:nth-of-type(2) {
+				grid-template-columns: 1fr 1fr;
+				gap: 15px;
+			}
+
+			.box:nth-of-type(3) {
+				grid-template-columns: 30% 1fr 30%;
+				gap: 15px;
+			}
+
+			.form__item {
+				display: flex;
+				flex-direction: column;
+				justify-content: end;
+			}
+
+			label,
+			legend {
+				margin-bottom: 10px;
+			}
+
+			input,
+			select,
+			textarea {
+				padding: 15px;
+				font-family: "Poppins", sans-serif;
+				margin-bottom: 25px;
+				border: 1px solid #d9dcdf;
+				border-radius: 5px;
+			}
+
+			input[disabled] {
+				background-color: #f3f4f5;
+			}
+
+			select {
+				appearance: none;
+				background: #ffffff url("images/order-form/arrow-down.svg") no-repeat 95% center;
+			}
+
+			.checkboxes,
+			.radios {
+				display: flex;
+				gap: 20px;
+			}
+
+			.label-checkbox,
+			.label-radio,
+			.offer-sign-up {
+
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				font-size: 14px;
+			}
+
+			input[type="checkbox"] {
+				appearance: none;
+				margin: auto 0;
+				border: none;
+				background: #ffffff url("images/order-form/checkbox-unchecked.svg") no-repeat center center;
+			}
+
+			input[type="checkbox"]:checked {
+				background: #ffffff url("images/order-form/checkbox-checked.svg") no-repeat center center;
+			}
+
+			input[type="checkbox"]:disabled {
+				opacity: .5;
+			}
+
+			input[type="radio"] {
+				appearance: none;
+				margin: auto 0;
+				border: none;
+				background: #ffffff url("images/order-form/radio-unchecked.svg") no-repeat center center;
+			}
+
+			input[type="radio"]:checked {
+				background: #ffffff url("images/order-form/radio-checked.svg") no-repeat center center;
+			}
+
+			fieldset {
+				border: none;
+			}
+
+			textarea {
+				resize: none;
+			}
+
+			.btn-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.btn {
+				display: inline-flex;
+				background-color: #475ac0;
+				border: none;
+				font-weight: 600;
+				color: #fff;
+				font-size: 16px;
+				padding: 15px 20px;
+				margin-bottom: 0;
+			}
+
 		</style>
 	</head>
 	<body class="flip">
 		<section class="learn">
 			<!-- Practice area start -->
 
-			<!-- Write your HTML here -->
+			<div class="container">
+				<h1 class="title">Your Order</h1>
+				<form action="" method="post" class="form">
+					<div class="box">
+						<div class="form__item">
+							<label for="order-name"><b>Name</b></label>
+							<input type="text" name="order-name" id="order-name" placeholder="Your full name" />
+						</div>
+						<div class="form__item">
+							<label for="order-email"><b>Email address</b></label>
+							<input type="email" name="order-email" id="order-email" value="chuck@roundhouse.com" disabled />
+						</div>
+					</div>
+					<div class="box">
+						<div class="form__item">
+							<label for="order-address-street"><b>Address</b></label>
+							<input type="text" name="order-address-street" id="order-address-street" placeholder="9 Augusta Street" />
+						</div>
+						<div class="form__item">
+							<label for="order-address-number" class="sr-only">House number</label>
+							<input type="text" name="order-address-number" id="order-address-number" placeholder="Suite 122" />
+						</div>
+					</div>
+					<div class="box">
+						<div class="form__item">
+							<label for="order-city"><b>City</b></label>
+							<input type="text" name="order-city" id="order-city" placeholder="New Jersey" />
+						</div>
+						<div class="form__item">
+							<label for="order-state"><b>State</b></label>
+							<select name="order-state" id="order-state">
+								<option value="New York">New York</option>
+								<option value="lorem1">Lorem lorem.</option>
+								<option value="lorem2">Lorem lorem.</option>
+							</select>
+						</div>
+						<div class="form__item">
+							<label for="order-zip"><b>ZIP</b></label>
+							<input type="text" name="order-zip" id="order-zip" placeholder="726221" />
+						</div>
+					</div>
+					<div class="box">
+						<fieldset>
+							<legend><b>What color samples should we send you?</b></legend>
+							<div class="checkboxes">
+								<label for="sample-white" class="label-checkbox">
+									<input type="checkbox" name="color-sample" id="sample-white" value="sample-white" disabled> White
+								</label>
+								<label for="sample-magenta" class="label-checkbox">
+									<input type="checkbox" name="color-sample" id="sample-magenta" value="sample-magenta"> Magenta
+								</label>
+								<label for="sample-burgundy" class="label-checkbox">
+									<input type="checkbox" name="color-sample" id="sample-burgundy" value="sample-burgundy"> Burgundy
+								</label>
+								<label for="sample-charcoal" class="label-checkbox">
+									<input type="checkbox" name="color-sample" id="sample-charcoal" value="sample-charcoal"> Charcoal
+								</label>
+							</div>
+						</fieldset>
+					</div>
+			
+					<div class="box">
+						<fieldset>
+							<legend><b>How large is your team?</b></legend>
+							<div class="radios">
+								<label for="size-small" class="label-radio">
+									<input type="radio" name="team-size" id="size-small" value="1-5"> 1-5 people
+								</label>
+								<label for="size-medium" class="label-radio">
+									<input type="radio" name="team-size" id="size-medium" value="6-10" checked> 6-10 people
+								</label>
+								<label for="size-large" class="label-radio">
+									<input type="radio" name="team-size" id="size-large" value="10+"> 10+ people
+								</label>
+							</div>
+						</fieldset>
+					</div>
+			
+					<div class="box">
+						<label for="order-comments"><b>Comments</b></label>
+						<textarea name="order-comments" id="order-comments" cols="30" rows="10" placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, possimus eaque ad nam pariatur nihil soluta molestias dolorum incidunt! Assumenda."></textarea>
+					</div>
+			
+					<div class="box btn-wrapper">
+						<label for="offer-sign-up" class="offer-sign-up">
+							<input type="checkbox" name="offer-sign-up" id="offer-sign-up"> Sign up for special offers
+						</label>
+			
+						<input type="submit" value="Place Order" class="btn">
+					</div>
+				</form>
+			</div>
 
 			<!-- Practice area end -->
 		</section>
