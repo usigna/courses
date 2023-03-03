@@ -8,15 +8,76 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
 
         <!-- Write your CSS in this file -->
         <link rel="stylesheet" href="css/landing-page.css">
 	</head>
 	<body>
 		<!-- Write your HTML here -->
-
-		<!-- Delete this after you get the design file -->
-		<p>Landing page design <a href="https://www.figma.com/file/pmr3UHzHBp37SsFFoZ4VmY/Elementor-Landing-Page?node-id=41%3A159">can be found here</a>. You can delete this paragraph when you start building the page.</p>
+		<header class="header">
+			<img src="images/landing-page/logo.svg" alt="Chair store." class="logo" />
+		</header>
+		<main class="main">
+			<section class="section hero">
+				<h1 class="title title--hero">Modern Chairs Crafted with Love</h1>
+				<p class="text text--hero">We love creating high quality and comfortable chairs</p>
+				<a href="#assortment" class="btn btn--brown">Discover our chair selection</a>
+			</section>
+			<section class="section assortment" id="assortment">
+				<h2 class="title title--section">The selection</h2>
+				<p class="subtitle">Our Chairs</p>
+				<p class="text text--small">We mostly sell one-off items. That means that we make one-of-a-kind furniture pieces so whoever buys it will have a unique item.</p>
+				<div class="items">
+					<div class="item">
+						<img src="images/landing-page/furniture-1.jpg" alt="White chair.">
+						<div class="number">01</div>
+						<h3 class="title title--item">Tufted white leather sofa chair</h3>
+						<p class="text text--small">This will fit perfectly in any beauty salon or modern home thanks to its timeless design.</p>
+						<div class="price">$289</div>
+					</div>
+					<div class="item">
+						<img src="images/landing-page/furniture-2.jpg" alt="Black chair.">
+						<div class="number">02</div>
+						<h3 class="title title--item">Black and brown wooden chair</h3>
+						<p class="text text--small">Both minimalistic and comfortable, this is a great choice for home or office.</p>
+						<div class="price">$99</div>
+					</div>
+					<div class="item">
+						<img src="images/landing-page/furniture-3.jpg" alt="White bar chair.">
+						<div class="number">03</div>
+						<h3 class="title title--item">Rustic wooden bar stool</h3>
+						<p class="text text--small">Made from solid beech wood, this piece will fit nicely in your rustic kitchen.</p>
+						<div class="price">$139</div>
+					</div>
+				</div>
+			</section>
+			<section class="section order">
+				<h2 class="sr-only">Order</h2>
+				<p class="text text--white">Having the right chair in your dining room or in your living room can make all the difference. Order yours today.</p>
+				<a href="#" class="btn btn--white">Order now</a>
+			</section>
+			<section class="section contact">
+				<h2 class="title title--section">Visit our store</h2>
+				<div class="phone">(307) 555-0133</div>
+				<address class="address">2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
+				<div class="social-media">
+					<a href="#">
+						<img src="images/landing-page/icon-twitter.svg" alt="Twitter." />
+					</a>
+					<a href="#">
+						<img src="images/landing-page/icon-facebook.svg" alt="Facebook." />
+					</a>
+					<a href="#">
+						<img src="images/landing-page/icon-instagram.svg" alt="Instagram." />
+					</a>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<p class="text text--small">
+				(c) Copyright 2021 The Chair Company. All rights reserved. Built with <b>WordPress</b> and <b>Elementor</b>.
+			</p>
+		</footer>
 	</body>
 </html>
